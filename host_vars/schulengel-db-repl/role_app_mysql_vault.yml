@@ -1,5 +1,6 @@
-# role_app_mysql_vault_db_root_pw: Secret-345
-role_app_mysql_vault_root_auth_plugin: auth_socket
+role_app_mysql_vault_db_root_pw: Secret-123
+role_app_mysql_vault_root_auth_plugin: caching_sha2_password
+# role_app_mysql_vault_root_auth_plugin: auth_socket
 role_app_mysql_vault_default_auth_user: root
 role_app_mysql_vault_slave_repl_user: replication
 role_app_mysql_vault_slave_repl_pw: Secret-123

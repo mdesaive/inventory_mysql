@@ -1,7 +1,8 @@
-# role_app_mysql_vault_db_root_pw: Secret-234
+role_app_mysql_vault_db_root_pw: Secret-123
 role_app_mysql_vault_default_auth_user: root
+role_app_mysql_vault_root_auth_plugin: mysql_native_password
+# role_app_mysql_vault_root_auth_plugin: auth_socket
 # role_app_mysql_vault_default_auth_pw: Secret-234
-role_app_mysql_vault_root_auth_plugin: auth_socket
 # role_app_mysql_vault_users:
 #   - name: admin
 #     pw: Secret-456
