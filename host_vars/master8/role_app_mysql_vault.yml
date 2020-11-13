@@ -1,0 +1,10 @@
+# role_app_mysql_vault_db_root_pw: Secret-234
+role_app_mysql_vault_default_auth_user: root
+# role_app_mysql_vault_default_auth_pw: Secret-234
+role_app_mysql_vault_root_auth_plugin: auth_socket
+# role_app_mysql_vault_users:
+#   - name: admin
+#     pw: Secret-456
+#     host: 10.0.44.74
+#     priv:
+#       '*.*:ALL'
