@@ -2,11 +2,16 @@ ansible_python_interpreter: '/usr/bin/python2'
 role_app_mysql_service_maintenance: allow-stop-and-start
 role_app_mysql_role: master
 role_app_mysql_server_id: 20
-role_app_mysql_repo: default
-role_app_mysql_mysql_version: '5.5'
+role_app_mysql_repo: community
+role_app_mysql_mysql_version: '5.7'
+# role_app_mysql_repo: default
+# role_app_mysql_mysql_version: '5.5'
 role_app_mysql_service_address: 10.128.11.192
 role_app_mysql_general_log_enabled: True
 role_app_mysql_slowquery_log_enabled: True
+role_app_mysql_ssl_cafile: cacert.pem
+role_app_mysql_ssl_cert: master8.mauerpark-l105-vm.heinlein-intern.de-20201114.crt
+role_app_mysql_ssl_key: master8.mauerpark-l105-vm.heinlein-intern.de-20201114.key
 role_app_mysql_configs:
   50-recover-dump:
     mysqld:
