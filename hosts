@@ -12,69 +12,10 @@ all:
   vars:
     ansible_python_interpreter: '/usr/bin/python3'
   children:
-    mysql_cluster:
+    schulengel_testing:
       vars:
-        role_app_mysql_clustername: democluster
+        role_app_mysql_clustername: schulengel_testing
         role_app_mysql_clustertype: master-slave
       hosts:
         master8:
-          ansible_python_interpreter: '/usr/bin/python2'
-          role_app_mysql_service_maintenance: allow-stop-and-start
-          role_app_mysql_role: master
-          role_app_mysql_server_id: 20
-          role_app_mysql_repo: default
-          role_app_mysql_mysql_version: '5.5'
-          role_app_mysql_service_address: 10.128.11.192
-          role_app_mysql_general_log_enabled: True
-          role_app_mysql_slowquery_log_enabled: True
-          role_app_mysql_configs:
-            # 31-auth-socket:
-            #   mysqld:
-            #     plugin-load-add: auth_socket.so
-            #     # ignore-db-dir: lost+found
-            50-recover-dump:
-              mysqld:
-                innodb_data_file_path: 'ibdata1:10M:autoextend'
-                innodb_file_per_table: 1
-                max_heap_table_size: 6G
-                tmp_table_size: 6G
-                # innodb_rollback_on_timeout: 1
-                # innodb_lock_wait_timeout: 600
-                # max_connections: 350
-                # log-bin: mysql-bin
-                # binlog-format: 'ROW'
-                # general_log: 1
-                # general_log_file: /var/log/mysql/mysql.log
-                # bind-address: 0.0.0.0
         schulengel-db-repl:
-          role_app_mysql_service_maintenance: allow-stop-and-start
-          role_app_mysql_role: slave
-          role_app_mysql_server_id: 50
-          role_app_mysql_repo: community
-          role_app_mysql_mysql_version: '8.0'
-          role_app_mysql_service_address: 10.128.11.176
-          role_app_mysql_master_address: 10.128.11.192
-          role_app_mysql_master_name: master8
-          role_app_mysql_general_log_enabled: True
-          role_app_mysql_slowquery_log_enabled: True
-          role_app_mysql_configs:
-            # 30-heinlein:
-            #   mysqld:
-            #     ignore-db-dir: 'lost+found'
-            50-recover-dump:
-              mysqld:
-                innodb_data_file_path: 'ibdata1:10M:autoextend'
-                innodb_file_per_table: 1
-                max_heap_table_size: 6G
-                tmp_table_size: 6G
-          # role_app_mysql_configs:
-          #   01-cloudstack:
-          #     mysqld:
-          #         innodb_rollback_on_timeout: 1
-          #         innodb_lock_wait_timeout: 600
-          #         max_connections: 350
-          #         log-bin: mysql-bin
-          #         binlog-format: 'ROW'
-          #         general_log: 1
-          #         general_log_file: /var/log/mysql/mysql.log
-          #         bind-address: 0.0.0.0

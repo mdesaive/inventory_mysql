@@ -1,0 +1,21 @@
+role_app_mysql_master_binlogposition:
+  File: "mysql-bin.000004"
+  Position: 625
+  Is_Master: true
+role_app_mysql_service_maintenance: allow-stop-and-start
+role_app_mysql_role: slave
+role_app_mysql_server_id: 50
+role_app_mysql_repo: community
+role_app_mysql_mysql_version: '8.0'
+role_app_mysql_service_address: 10.128.11.176
+role_app_mysql_master_address: 10.128.11.192
+role_app_mysql_master_name: master8
+role_app_mysql_general_log_enabled: True
+role_app_mysql_slowquery_log_enabled: True
+role_app_mysql_configs:
+  50-recover-dump:
+    mysqld:
+      innodb_data_file_path: 'ibdata1:10M:autoextend'
+      innodb_file_per_table: 1
+      max_heap_table_size: 6G
+      tmp_table_size: 6G
