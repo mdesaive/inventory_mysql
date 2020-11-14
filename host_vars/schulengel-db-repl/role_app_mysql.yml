@@ -7,7 +7,7 @@ role_app_mysql_role: slave
 role_app_mysql_server_id: 50
 role_app_mysql_repo: community
 role_app_mysql_mysql_version: '8.0'
-role_app_mysql_service_address: 10.128.11.176
+role_app_mysql_service_address: 10.128.10.27
 role_app_mysql_master_address: 10.128.11.192
 role_app_mysql_master_name: master8
 role_app_mysql_general_log_enabled: True

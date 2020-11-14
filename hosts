@@ -17,5 +17,5 @@ all:
         role_app_mysql_clustername: schulengel_testing
         role_app_mysql_clustertype: master-slave
       hosts:
-        master8:
+        # master8:
         schulengel-db-repl:
